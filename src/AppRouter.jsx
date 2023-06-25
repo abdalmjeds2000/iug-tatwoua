@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
-import Manage from './pages/manage'
+import Manage from './pages/Manage'
 
 const AppRouter = () => {
   return (
