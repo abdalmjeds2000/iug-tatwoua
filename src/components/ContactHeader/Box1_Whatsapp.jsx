@@ -3,7 +3,7 @@ import { WhatsAppOutlined } from '@ant-design/icons';
 
 const Box1_Whatsapp = () => {
   return (
-    <div className='flex-1 flex justify-between flex-wrap items-center gap-2'>
+    <div className='flex-1 flex justify-between items-center gap-2 max-lg:flex-col max-lg:text-center'>
       <div>
         <Typography.Text strong className='block'>تواصل معنا عبر الواتسآب</Typography.Text>
         <ConfigProvider theme={{ token: { colorPrimary: '#00b96b', }, }}>

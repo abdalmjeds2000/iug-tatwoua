@@ -48,7 +48,7 @@ const Box2_Instructions = () => {
 
 
   return (
-    <div className="flex-1">
+    <div className="flex-1 max-lg:text-center">
       <Typography.Text strong className='block'>
         طريقة التسجيل في الطلبات المتاحة للتطوع
       </Typography.Text>

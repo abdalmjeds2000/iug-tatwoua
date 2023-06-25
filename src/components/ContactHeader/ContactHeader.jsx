@@ -9,7 +9,7 @@ const ContactHeader = () => {
       <Divider type='vertical' style={{ minHeight: 50}} />
       <Box2_Instructions />
       <Divider type='vertical' style={{ minHeight: 50}} />
-      <div className='flex-1'>
+      <div className='flex-1 max-lg:text-center'>
         <Typography.Text strong className='block'>تواصل معنا عبر البريد الالكتروني</Typography.Text>
         <a href='mailto:abdalmjeds2000@gmail.com'>
           <Button type='default' className='block mt-2' icon={<MailOutlined />}>
