@@ -48,7 +48,7 @@ const DataTable = ({ extra }) => {
 
   return (
     <div>
-      <div className="flex justify-between items-center bg-[#2969B0] py-3 px-6 rounded-lg mb-2">
+      <div className="flex flex-wrap justify-between items-center bg-[#2969B0] py-3 px-6 rounded-lg mb-2">
         <Typography.Title level={3} style={{margin: 0, color: '#fff'}}>طلبات التطوع</Typography.Title>
         <div>{extra}</div>
       </div>
