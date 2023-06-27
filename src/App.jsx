@@ -29,8 +29,8 @@ function App() {
                 <img 
                   src={logo}
                   alt='logo'
-                  className='w-20 z-10 shadow-lg rounded-full'
-                  style={{ width: '75px', margin: '16px 24px 16px 0' }}
+                  className='w-20 z-10 shadow-lg rounded-full mt-5'
+                  style={{ width: '75px' }}
                 />
               </Link>
             </div>

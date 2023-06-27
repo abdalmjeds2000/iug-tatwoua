@@ -1,6 +1,7 @@
-import { Typography } from 'antd'
-import ContactHeader from '../components/ContactHeader/ContactHeader'
-import DataTable from '../components/DataTable/DataTable'
+import { Typography } from 'antd';
+import ContactHeader from '../components/ContactHeader/ContactHeader';
+import DataTable from '../components/DataTable/DataTable';
+import SupportEngine from '../components/SupportEngine/SupportEngine';
 
 const Home = () => {
   
@@ -14,6 +15,8 @@ const Home = () => {
       </div>
       <ContactHeader />
       <DataTable />
+
+      <SupportEngine />
     </div>
   )
 }
