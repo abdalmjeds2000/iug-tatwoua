@@ -5,9 +5,10 @@ import { BrowserRouter } from 'react-router-dom'
 import * as firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 
-firebase.initializeApp({
+const app = firebase.initializeApp({
   apiKey: "AIzaSyDuLZAUPYmwBxPDssIwdnD3uDlEnKF7GSM",
   authDomain: "iug-tatwoua.firebaseapp.com",
   databaseURL: "https://iug-tatwoua-default-rtdb.firebaseio.com",
@@ -17,6 +18,8 @@ firebase.initializeApp({
   appId: "1:1002837082846:web:58e0e46935515aab7cf84f",
   measurementId: "G-4WDPYE2MQ9"
 });
+
+export const db = getFirestore(app);
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
