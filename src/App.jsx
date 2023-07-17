@@ -36,8 +36,8 @@ function App() {
             </div>
           </Layout.Header>
           <Layout.Content className='mx-3 my-6 md:my-12'>
-            <div className={`container mx-auto p-6 min-h-[500px] rounded-2xl border bg-[${colorBgContainer}]`}>
-            <AppRouter />
+            <div className={`container mx-auto p-6 min-h-[480px] rounded-2xl border bg-[${colorBgContainer}]`}>
+              <AppRouter />
             </div>
           </Layout.Content>
           <Layout.Footer style={{ textAlign: 'center' }}>

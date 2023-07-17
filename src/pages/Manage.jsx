@@ -11,7 +11,7 @@ const Manage = () => {
   const [isAuth, setIsAuth] = useState(false);
   const handleSubmit = (values) => {
     const { password } = values;
-    if (password === '123') {
+    if (password === '123456@#@#ABcd') {
       setIsAuth(true);
       message.success('تم تسجيل الدخول بنجاح');
     } else {
@@ -80,6 +80,7 @@ const ManageRequest = ({ onFinish, itemId, resetSelectedItem }) => {
   }, [itemId]);
 
   const initForm = async () => {
+    setLoading(true);
     const docRef = doc(db, "requests", itemId);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
@@ -88,12 +89,13 @@ const ManageRequest = ({ onFinish, itemId, resetSelectedItem }) => {
       console.log("No such document!");
     }
     const data = docSnap.data();
+    // handle firebase timestamp to show correctly in antd datepicker
     data.startDate = moment(data.startDate.toDate());
     data.endDate = moment(data.endDate.toDate());
     delete data.id;
     form.setFieldsValue(data);
-    console.log(data);
     setVisible(true);
+    setLoading(false);
   }
   const handleEdit = async (values) => {
     setLoading(true);
@@ -130,7 +132,7 @@ const ManageRequest = ({ onFinish, itemId, resetSelectedItem }) => {
         footer={null}
       > 
         <br />
-        {visible && <Form form={form} layout="vertical" name="new-request-form" onFinish={itemId ? handleEdit : handleSubmit}
+        {visible ? <Form form={form} layout="vertical" name="new-request-form" onFinish={itemId ? handleEdit : handleSubmit}
           onFinishFailed={() => message.error('الرجاء التأكد من إدخال جميع الحقول بشكل صحيح')}
         >
           <Form.Item label='الحملة/المبادرة' name="title" rules={rulesOptions}>
@@ -140,7 +142,7 @@ const ManageRequest = ({ onFinish, itemId, resetSelectedItem }) => {
             <Input size="large" placeholder="أكتب المؤسسة" />
           </Form.Item>
           <Form.Item label='بداية التطوع' name="startDate" rules={rulesOptions}>
-            <DatePicker size="large" placeholder="أكتب بداية التطوع" format="DD/MM/YYYY" style={{display: "block"}} />
+            <DatePicker size="large" placeholder="أكتب بداية التطوع" onChange={console.log} format="DD/MM/YYYY" style={{display: "block"}} />
           </Form.Item>
           <Form.Item label='نهاية التطوع' name="endDate" rules={rulesOptions}>
             <DatePicker size="large" placeholder="أكتب نهاية التطوع" format="DD/MM/YYYY" style={{display: "block"}} />
@@ -156,7 +158,7 @@ const ManageRequest = ({ onFinish, itemId, resetSelectedItem }) => {
               {itemId ? 'تعديل' : 'إضافة'}
             </Button>
           </Form.Item>
-        </Form>}
+        </Form> : null}
       </Modal>
     </>
   )

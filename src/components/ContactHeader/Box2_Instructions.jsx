@@ -3,6 +3,7 @@ import { Button, Image, Modal, Steps, Typography } from "antd";
 import { OrderedListOutlined } from "@ant-design/icons";
 import intro1 from "../../assets/intro1.png";
 import intro2 from "../../assets/intro2.png";
+import intro3 from "../../assets/intro3.png";
 
 
 const Box2_Instructions = () => {
@@ -21,21 +22,32 @@ const Box2_Instructions = () => {
       description: <>
         قم بتسجيل الدخول على بوابة الطلبة من خلال الضغط <Typography.Link href='https://idp.iugaza.edu.ps/idp/Authn/UserPassword' target='_blank' rel="noreferrer">هنا</Typography.Link>
         {current === 0 && <><br />
-        <Image src={intro1} alt='intro1' width={400} className='block' /></>}
+        <Image src={intro1} alt='step 1 image' width={400} className='block' /></>}
       </>,
     },
     {
-      title: 'طلبات التطوع',
+      title: 'من القائمة الرئيسية: طلبات التطوع',
       description: <>
         من القائمة الجانبية إضغط على طلبات التطوع كما هو موضح في الصورة
         {current === 1 && <><br />
-        <Image src={intro2} alt='intro2' width={400} className='block' /></>}
+        <Image src={intro2} alt='step 2 image' width={400} className='block' /></>}
       </>,
     },
     {
-      title: <>إضغت على زر <b>إعتماد</b></>,
+      title: 'من القائمة النشطة: إختر المهمة التطوعية',
+      description: <>
+        من القائمة النشطة إختر المهمة التطوعية التي تريد التطوع بها
+        {current === 2 && <><br />
+        <Image src={intro3} alt='step 3 image' width={400} className='block' /></>}
+      </>,
     },{
       title: <>إضغت على زر <b>حفظ</b></>,
+    },{
+      title: <>إضغت على زر <b>إعتماد</b></>,
+    },{
+      title: <>يظهر الطلب لدى <b>مشرف التطوع</b></>,
+    },{
+      title: <>يتم إرسال لك رسالة <b>SMS</b></>,
     },
   ];
 
