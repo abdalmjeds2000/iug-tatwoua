@@ -5,7 +5,6 @@ import { StyleProvider } from '@ant-design/cssinjs';
 import AppRouter from './AppRouter';
 import { Link } from 'react-router-dom';
 function App() {
-  const { token: { colorBgContainer } } = theme.useToken();
 
   return (
     <ConfigProvider
@@ -36,9 +35,7 @@ function App() {
             </div>
           </Layout.Header>
           <Layout.Content className='mx-3 my-6 md:my-12'>
-            <div className={`container mx-auto p-6 min-h-[480px] rounded-2xl border bg-[${colorBgContainer}]`}>
-              <AppRouter />
-            </div>
+            <AppRouter />
           </Layout.Content>
           <Layout.Footer style={{ textAlign: 'center' }}>
             IUG © 2023{/* Created by <Typography.Link href='https://twitter.com/abdalmjeds2000'>AbdAlmjed Skaik</Typography.Link> */}

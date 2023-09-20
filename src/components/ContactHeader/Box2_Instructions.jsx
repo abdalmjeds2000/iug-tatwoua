@@ -47,7 +47,7 @@ const Box2_Instructions = () => {
     },{
       title: <>يظهر الطلب لدى <b>مشرف التطوع</b></>,
     },{
-      title: <>يتم إرسال لك رسالة <b>SMS</b></>,
+      title: <>يتم إرسال لك رسالة <b>SMS</b> عند بدء النشاط</>,
     },
   ];
 
@@ -62,7 +62,7 @@ const Box2_Instructions = () => {
   return (
     <div className="flex-1 max-lg:text-center">
       <Typography.Text strong className='block'>
-        طريقة التسجيل في الطلبات المتاحة للتطوع
+        خطوات التسجيل
       </Typography.Text>
       <Button type='primary' className='block mt-2' icon={<OrderedListOutlined />} onClick={() => setVisible(true)}>
         طريقة التسجيل

@@ -11,7 +11,7 @@ const Manage = () => {
   const [isAuth, setIsAuth] = useState(false);
   const handleSubmit = (values) => {
     const { password } = values;
-    if (password === '123456@#@#ABcd') {
+    if (password === 'Public-123456') {
       setIsAuth(true);
       message.success('تم تسجيل الدخول بنجاح');
     } else {
@@ -21,9 +21,9 @@ const Manage = () => {
 
   }
   const rulesOptions = [{ required: true, message: 'هذا الحقل مطلوب' }];
-
+  console.log("test log");
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto p-6 min-h-[480px] rounded-2xl border">
       {!isAuth && <div className="max-w-md mx-auto mt-8">
         <Form layout="vertical" onFinish={handleSubmit}>
           <Typography.Title level={4} className='text-center'>

@@ -2,11 +2,16 @@ import Box1_Whatsapp from './Box1_Whatsapp';
 import { Button, Divider, Typography } from 'antd';
 import Box2_Instructions from './Box2_Instructions';
 import Box4_Policies from './Box4_Policies';
+import Box5_Telegram from './Box5_Telegram';
 import { MailOutlined } from '@ant-design/icons';
+
+
 const ContactHeader = () => {
   return (
-    <div className='bg-neutral-100 rounded-lg border p-4 mb-8 flex items-center justify-stretch gap-5 max-lg:flex-col max-w-[1400px] mx-auto'>
+    <div className='bg-neutral-100 rounded-lg border p-4 mb-8 flex items-center justify-stretch gap-5 max-lg:flex-col max-w-[1400px] mx-auto !flex-wrap'>
       <Box1_Whatsapp />
+      <Divider type='vertical' style={{ minHeight: 50}} />
+      <Box5_Telegram />
       <Divider type='vertical' style={{ minHeight: 50}} />
       <Box2_Instructions />
       <Divider type='vertical' style={{ minHeight: 50}} />
